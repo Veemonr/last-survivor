@@ -83,5 +83,7 @@ for(let i=0;i<back.length;i++){
         document.querySelector("#showDelete").innerHTML=""
         document.querySelector("#isSuccesDelete").innerHTML=""
         document.querySelector("#isSuccesAdd").innerHTML=""
+        document.querySelector("#buttonName").innerHTML=""
+
     }
 }
