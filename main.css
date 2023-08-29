@@ -1,0 +1,54 @@
+#menu{
+    margin-right: 200px;
+    height: 1000px;
+    width: 1000px;
+    background-color: black;
+    color:white;
+    opacity: 90%;
+    text-align: center;
+}
+#mainMenu{
+    display: block;
+    padding-left: 10%;
+    padding-top: 30%;
+}
+
+#menuAdd{
+    display: none;
+    padding-left: 10%;
+    padding-top: 30%;
+}
+
+#showAdd{
+    color:white;
+}
+#showDelete{
+    color:white;
+}
+
+#menuDelete{
+    display: none;
+    padding-left: 10%;
+    padding-top: 30%;
+}
+
+#pickMenu{
+    display: none;
+    padding-left: 10%;
+    padding-top: 30%;
+}
+#pickName{
+    display: none;
+    padding-left: 10%;
+    padding-top: 30%;
+}
+
+button{
+    background-color: wheat;
+    color:black;
+    opacity: 100%;
+}
+
+button:hover{
+    cursor: pointer;
+}
