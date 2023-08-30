@@ -4,57 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>The last survivor</title>
     <!--? ngambil icon  -->
     <link rel="icon" href="https://image.gambarpng.id/pngs/gambar-transparent-red-and-white-with-bamboo-stick-flag-icon_61014.png" type="image/icon type">
 </head>
 <body>
-    <div id="menu">
-        <div id="mainMenu">
-            <div id="start">
-                <button id="startButton">Start</button>
+    <div class="container">
+        <div id="menu">
+            <div id="mainMenu">
+                <div class="main-menu-container">
+                    <div id="start">
+                        <button class="buttons" id="startButton">Start</button>
+                    </div>
+                    <div id="add">
+                        <button class="buttons" id="addButton">Tambah Nama Pejuang</button>
+                    </div>
+                    <div id="delete">
+                        <button class="buttons" id="deleteButton">Menghapus Nama Pejuang</button>
+                    </div>
+                </div>
             </div>
-            <div id="add">
-                <button id="addButton">Tambah Nama Pejuang</button>
-            </div>
-            <div id="delete">
-                <button id="deleteButton">Menghapus Nama Pejuang</button>
-            </div>
-        </div>
-
-        <div id="menuAdd">
-            <div id="showAdd"></div>
-            <textarea id="addInput" rows="2" cols="20"></textarea> 
-            <button id="inputAddButton">Tambah Pejuang</button>
-            <div id="isSuccesAdd"></div>
-            <br>
-            <button id="backMenu">Kembali ke menu awal</button>
-        </div>
-        <div id="menuDelete">
-            <div id="showDelete"></div>
-            <!-- <textarea id="deleteInput" rows="2" cols="20"></textarea>  --> <!--! ini dihapus                --> 
-            <button id="inputDeleteButton">Hapus Pejuang</button>
-            <div id="isSuccesDelete"></div>
-            <br>
-            <button id="backMenu">Kembali ke menu awal</button>
-        </div>
-        <div id="pickName">
-            <div id="buttonName"></div>
-            <button id="backMenu">Kembali ke menu awal</button>
-        </div>
-    </div>
-
-    <<!--! ----------------------------------------------------------------------------------------------->
-    <div id="dialogMenu" style="color:white">
-
-    </div>
-
-
-    <div id="mainGame" style="color:white">
-        
-    </div>
     
+            <div id="menuAdd">
+                <div id="showAdd"></div>
+                <textarea id="addInput" rows="2" cols="20"></textarea> 
+                <button class="buttons" id="inputAddButton">Tambah Pejuang</button>
+                <div id="isSuccesAdd"></div>
+                <br>
+                <button class="buttons" id="backMenu">Kembali ke menu awal</button>
+            </div>
+            <div id="menuDelete">
+                <div id="showDelete"></div>
+                <!-- <textarea id="deleteInput" rows="2" cols="20"></textarea>  -->
+                <button class="buttons" id="inputDeleteButton">Hapus Pejuang</button>
+                <div id="isSuccesDelete"></div>
+                <br>
+                <button class="buttons" id="backMenu">Kembali ke menu awal</button>
+            </div>
+            <div id="pickName">
+                <div id="buttonName"></div>
+                <button class="buttons" id="backMenu">Kembali ke menu awal</button>
+            </div>
+        </div>
 
-    <script src="main.js"></script>
+
+        <div id="dialogMenu" style="color:white">
+            <div id="topDialog">
+                <div id="characterDialog">
+                    <img src="img/—Pngtree—boy illustration holding bambu runcing_5554569.png" style="width:200px;height:200px" id="characterDialogChar">
+                </div>
+                <div id="villianDialog">
+                    <img src="img/—Pngtree—boy illustration holding bambu runcing_5554569.png" style="width:200px;height:200px;opacity:0"" id="villianDialogChar">
+                </div>
+            </div>
+            <div id="bottomDialog">
+                <div id="nameDialog">
+                    Narator
+                </div>
+                <div id="isiDialog"></div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div id="mainGame" style="color:white">game </div>
+    </div>
+
+
+    <script src="main.js">
+    </script>
 </body>
 </html>
