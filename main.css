@@ -4,10 +4,20 @@ html {
     height: 100%;
 }
 
-#menu {
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
+    height: 100%;
+}
+
+#menu {
     opacity: 90%;
     text-align: center;
 }
@@ -15,7 +25,14 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
+}
+
+.main-menu-container {
+    background-color: rgba(255, 255, 255, 0.864);
+    border: 1px solid white;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    padding: 1em;
 }
 
 #menuAdd {
@@ -55,23 +72,49 @@ html {
     margin: 0;
     justify-content: center;
     align-items: center;
-    
 }
 
 button {
     display: flex;
-    background-color: wheat;
+    background-color: #C0C0C0;
     font-size: 2em;
     color:black;
     opacity: 100%;
     margin: 30px 0;
+    font-family: 'Bebas Neue', sans-serif;
+    border-radius: 5px;
+    padding: 0.2em;
 }
 
 button:hover {
     cursor: pointer;
+    color: aliceblue;
 }
+
+.buttons {
+    font-family: 'Bebas Neue', sans-serif;
+    border-radius: 5px;
+    padding: 0.2em;
+}
+
+
 
 #start, #add, #delete {
    display: flex;
    justify-content: center;
+}
+
+#buttonName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainGame{
+    display: none;
+}
+
+#dialogMenu{
+    display:none;
 }
