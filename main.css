@@ -75,3 +75,17 @@ button:hover {
    display: flex;
    justify-content: center;
 }
+
+
+
+
+
+
+
+#mainGame{
+    display: none;
+}
+
+#dialogMenu{
+    display:none;
+}
