@@ -24,7 +24,7 @@ function bikinPejuangButton (data) {
     for(const pejuang of data){
         const pejuangButton = document.createElement("button");
         pejuangButton.onclick=function(){
-            pejuangTerpilih=pejuangButton.innerText
+            pejuangTerpilih = pejuangButton.innerText
             console.log(pejuangTerpilih);
             document.querySelector("#menu").style.display = "none"
             document.querySelector("#pickName").style.display = "none"
@@ -38,7 +38,7 @@ function bikinPejuangButton (data) {
 
 document.querySelector("#addButton").onclick = function() {
     document.querySelector("#mainMenu").style.display = "none"
-    document.querySelector("#menuAdd").style.display = "block"
+    document.querySelector("#menuAdd").style.display = "flex"
     showListPejuang(namaPejuang,"#showAdd")
 }
 
@@ -62,20 +62,20 @@ document.querySelector("#inputDeleteButton").onclick = function() {
 
 document.querySelector("#deleteButton").onclick=function() {
     document.querySelector("#mainMenu").style.display = "none"
-    document.querySelector("#menuDelete").style.display = "block"
+    document.querySelector("#menuDelete").style.display = "flex"
     showListPejuang(namaPejuang,"#showDelete")
 }
 
 document.querySelector("#start").onclick=function() {
     document.querySelector("#mainMenu").style.display="none"
-    document.querySelector("#pickName").style.display="block"
+    document.querySelector("#pickName").style.display="flex"
     bikinPejuangButton(namaPejuang)
 }
 
 let back=document.querySelectorAll(".backMenu")
 for(let i = 0; i < back.length; i++) {
-    back[i].onclick=function(){
-        document.querySelector("#mainMenu").style.display = "block"
+    back[i].onclick=function() {
+        document.querySelector("#mainMenu").style.display = "flex"
         document.querySelector("#menuDelete").style.display = "none"
         document.querySelector("#menuAdd").style.display = "none"
         document.querySelector("#pickName").style.display = "none"

@@ -1,22 +1,29 @@
-#menu{
-    margin-right: 200px;
-    height: 1000px;
-    width: 1000px;
+html {
     background-color: black;
-    color:white;
+    margin: 0;
+    height: 100%;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     opacity: 90%;
     text-align: center;
 }
-#mainMenu{
-    display: block;
-    padding-left: 10%;
-    padding-top: 30%;
+#mainMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
 }
 
-#menuAdd{
+#menuAdd {
     display: none;
-    padding-left: 10%;
-    padding-top: 30%;
+    flex-direction: column;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 #showAdd{
@@ -28,27 +35,43 @@
 
 #menuDelete{
     display: none;
-    padding-left: 10%;
-    padding-top: 30%;
+    flex-direction: column;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 #pickMenu{
     display: none;
-    padding-left: 10%;
-    padding-top: 30%;
+    flex-direction: column;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    
 }
 #pickName{
     display: none;
-    padding-left: 10%;
-    padding-top: 30%;
+    flex-direction: column;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-button{
+button {
+    display: flex;
     background-color: wheat;
+    font-size: 2em;
     color:black;
     opacity: 100%;
+    margin: 30px 0;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
+}
+
+#start, #add, #delete {
+   display: flex;
+   justify-content: center;
 }
