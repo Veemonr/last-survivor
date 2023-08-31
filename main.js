@@ -160,6 +160,11 @@ function reAssign(){
                 type:"characterDialog",
                 actor: pejuangTerpilih,
             },
+            {
+                pesan:'The End',
+                type:"characterDialog",
+                actor: pejuangTerpilih,
+            },
         ],
         kalahBoss1:[
             {
@@ -197,6 +202,12 @@ async function jalanDialog(){
     console.log(pejuangTerpilih);
     const dialog=dialogData[kondisi][pesanKe]
     if(!dialog){
+        if(kondisi==="setelahBoss3"){
+            document.querySelector("#dialogMenu").style.display="none"
+            document.querySelector("#mainMenu").style.display="flex"
+            document.querySelector("#menu").style.display="block"
+            window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        }
         pesanKe=0
         const checkKalah=kondisi.substring(0,5)
         console.log(checkKalah);
@@ -207,6 +218,27 @@ async function jalanDialog(){
         }
         document.querySelector("#dialogMenu").style.display="none"
         document.querySelector("#mainGame").style.display="flex"
+        document.querySelector(".bar-enemy").style.width="100%"
+        document.querySelector(".bar-player").style.width="100%"
+
+        document.querySelector(".p-player").innerText=pejuangTerpilih
+        if(kondisi==="opening"){
+            document.querySelector(".stage1").innerText="STAGE 1"
+            document.querySelector(".p-enemy").innerText="Dimitrije van der Berg"
+        }
+        if(kondisi==="opening"){
+            document.querySelector(".stage1").innerText="STAGE 1"
+            document.querySelector(".p-enemy").innerText="Dimitrije van der Berg"
+        }
+        else if(kondisi==="setelahBoss1"){
+            document.querySelector(".stage1").innerText="STAGE 2"
+            document.querySelector(".p-enemy").innerText="Iva Nakamura"
+        }
+        else if(kondisi==="setelahBoss2"){
+            document.querySelector(".stage1").innerText="STAGE 3"
+            document.querySelector(".p-enemy").innerText="Nunir"
+        }
+        
         return 
     }
     const type=dialog.type
@@ -253,7 +285,8 @@ document.querySelector("#retryButton").onclick=function(){
     document.querySelector("#mainMenu").style.display = "flex"
     document.querySelector("#menuKalah").style.display = "none"
 }
-document.querySelector("#menang").onclick=function(){
+//!---------------------------------------------------------------------------------------
+function menangGame(){
     document.querySelector("#mainGame").style.display = "none"
     document.querySelector("#dialogMenu").style.display = "block"
     document.querySelector("#bottomDialog").addEventListener("click", jalanDialog)
@@ -268,8 +301,8 @@ document.querySelector("#menang").onclick=function(){
     }
     jalanDialog()
 }
-
-document.querySelector("#kalah").onclick=function(){
+//!---------------------------------------------------------------------------------------------
+function kalahGame(){
     document.querySelector("#mainGame").style.display = "none"
     document.querySelector("#dialogMenu").style.display = "block"
     document.querySelector("#bottomDialog").addEventListener("click", jalanDialog)
@@ -429,3 +462,156 @@ for(let i = 0; i < back.length; i++) {
 
     }
 }
+
+
+//! =========================================================================================
+
+function checkMenang(){
+    if(document.querySelector(".bar-enemy").style.width==="0%"){
+        menangGame()
+        return 
+    }
+    if(document.querySelector(".bar-player").style.width==="0%"){
+        kalahGame()
+    }
+}
+
+document.querySelector("#toggleButton").addEventListener("click",buttonAttack)
+async function buttonAttack() {
+    // script.js
+    const toggleButton = document.getElementById("toggleButton");
+    const playerChar = document.getElementById("playerChar");
+    const playerCharAttack = document.getElementById("playerCharAttack");
+    const enemyCharDeath = document.getElementById("enemyCharDeath");
+    const audioAttackPlayer = document.getElementById("audioAttackPlayer");
+
+    playerCharAttack.style.left = "400px";
+    playerCharAttack.style.bottom = "5px";
+    playerChar.classList.toggle("hidden");
+    playerCharAttack.classList.toggle("hidden");
+    audioAttackPlayer.play();
+
+    setTimeout(() => {
+      playerChar.classList.toggle("hidden");
+      playerCharAttack.classList.toggle("hidden");
+    }, 1000);
+
+
+    if(!document.querySelector(".bar-enemy").style.width){
+    document.querySelector(".bar-enemy").style.width="100%"
+    }
+    let hBarTotal=document.querySelector(".bar-enemy").style.width
+    hBarTotal=hBarTotal.substring(0,(hBarTotal.length-1))
+    hBarTotal=Number(hBarTotal)
+    let hBar=document.querySelector(".health-bar-enemy")
+    let barValue=hBar.getAttribute("data-value")
+    let damage=(Math.floor(Math.random()*200))+100
+    barValue=Number(barValue)
+    let hitWidth = ((damage / barValue) * 100);
+    hitWidth=hBarTotal-hitWidth
+    console.log(hitWidth);
+    if(hitWidth<=0){
+        hitWidth=0
+    }
+    hitWidth+="%"
+    document.querySelector(".bar-enemy").style.width=hitWidth
+
+    await sleep(1100)
+    buttonAttackEnemy()
+    await sleep(1100)
+  }
+  async function buttonHeal() {
+    // script.js
+    const toggleButton1 = document.getElementById("toggleButton1");
+    const playerChar = document.getElementById("playerChar");
+    const playerCharHeal = document.getElementById("playerCharHeal");
+    const audioHealPlayer = document.getElementById("audioHealPlayer");
+
+    playerCharHeal.style.bottom = "0px";
+    playerChar.classList.toggle("hidden");
+    playerCharHeal.classList.toggle("hidden");
+    audioHealPlayer.play();
+    setTimeout(() => {
+      playerChar.classList.toggle("hidden");
+      playerCharHeal.classList.toggle("hidden");
+    }, 1000);
+
+    if(!document.querySelector(".bar-player").style.width){
+        document.querySelector(".bar-player").style.width="100%"
+        }
+    let hBarTotal=document.querySelector(".bar-player").style.width
+    hBarTotal=hBarTotal.substring(0,(hBarTotal.length-1))
+    hBarTotal=Number(hBarTotal)
+    let hitWidth = hBarTotal+40
+    if(hitWidth>=100){
+        hitWidth=100
+    }
+    hitWidth+="%"
+    document.querySelector(".bar-player").style.width=hitWidth
+    await sleep(1100)
+    buttonAttackEnemy()
+    await sleep(1100)
+  }
+  async function buttonDeff() {
+    // script.js
+    const toggleButton2 = document.getElementById("toggleButton2");
+    const playerChar = document.getElementById("playerChar");
+    const playerCharDeff = document.getElementById("playerCharDeff");
+    playerCharDeff.style.bottom = "0px";
+
+    playerChar.classList.toggle("hidden");
+    playerCharDeff.classList.toggle("hidden");
+
+    setTimeout(() => {
+      playerChar.classList.toggle("hidden");
+      playerCharDeff.classList.toggle("hidden");
+    }, 1000);
+    await sleep(1100)
+    buttonAttackEnemy()
+    await sleep(1100)
+  }
+
+
+  async function buttonAttackEnemy() {
+    // script.js
+    const toggleButton3 = document.getElementById("toggleButton3");
+    const enemyChar = document.getElementById("enemyChar");
+    const enemyCharAttack = document.getElementById("enemyCharAttack");
+    enemyCharAttack.style.bottom = "0px";
+    enemyCharAttack.style.left = "400px";
+
+    enemyChar.classList.toggle("hidden");
+    enemyCharAttack.classList.toggle("hidden");
+
+    setTimeout(() => {
+      enemyChar.classList.toggle("hidden");
+      enemyCharAttack.classList.toggle("hidden");
+    }, 1000);
+
+
+    if(!document.querySelector(".bar-player").style.width){
+        document.querySelector(".bar-player").style.width="100%"
+        }
+    let hBarTotal=document.querySelector(".bar-player").style.width
+    hBarTotal=hBarTotal.substring(0,(hBarTotal.length-1))
+    hBarTotal=Number(hBarTotal)
+    let hBar=document.querySelector(".health-bar-player")
+    let barValue=hBar.getAttribute("data-value")
+    let damage=(Math.floor(Math.random()*200))+100
+    barValue=Number(barValue)
+    let hitWidth = ((damage / barValue) * 100);
+    hitWidth=hBarTotal-hitWidth
+    console.log(hitWidth);
+    if(hitWidth<=0){
+        hitWidth=0
+    }
+    hitWidth+="%"
+    document.querySelector(".bar-player").style.width=hitWidth
+    checkMenang()
+  }
+
+  async function buttonInstantKill(){
+    document.querySelector(".bar-enemy").style.width="0%"
+    await sleep(1000)
+    checkMenang()
+  }

@@ -7,6 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>The last survivor</title>
     <!--? ngambil icon  -->
     <link rel="icon" href="https://image.gambarpng.id/pngs/gambar-transparent-red-and-white-with-bamboo-stick-flag-icon_61014.png" type="image/icon type">
@@ -38,7 +47,6 @@
             </div>
             <div id="menuDelete">
                 <div id="showDelete"></div>
-                <!-- <textarea id="deleteInput" rows="2" cols="20"></textarea>  -->
                 <button class="buttons" id="inputDeleteButton">Hapus Pejuang</button>
                 <div id="isSuccesDelete" style="color:white" ></div>
                 <br>
@@ -69,21 +77,159 @@
         </div>
 
 
+        <div id="menuKalah" style="color:white;">
+            <h1>Anda telah gugur di petarungan</h1>
+            <button id="retryButton">Kembali ke menu</button>
+        </div>
+
+
+
+<!--! ==========================================================================================================  -->
+
+        
+        
+        <div id="mainGame" style="color:white">
+
+            <div class="box-luar">
+                <!-- KUKASIH LAGU KEMERDEKAAN PAS PERANG BIAR GREGET WWKWK -->
+                <!-- <audio
+                  id="audioElement"
+                  src="assets/Kumpulan Lagu Kemerdekaan Untuk 17 an (online-audio-converter.com).mp3"
+                  autoplay
+                ></audio> -->
+                <!-- ================================================================================ -->
+                <div class="hBar">
+                  <div>
+                    <!-- ========== BAR HEALTH ===================== -->
+                    <div class="health-bar-player" data-total="1000" data-value="1000">
+                      <div class="bar-player">
+                        <div class="hit-player"></div>
+                      </div>
+                    </div>
+                    <!-- =========== BAR HEALTH ======================= -->
+                    <div class="name-player">
+                      <!-- ======== NAME PLAYER SESUAI DATA ============== -->
+                      <p class="p-player">CAPT Pattimura</p>
+                      <!-- ============================================== -->
+                    </div>
+                  </div>
+                  <div class="stage">
+                    <!-- ========== STAGE SESUAIN PER STAGE =============== -->
+                    <p class="stage1">STAGE 1</p>
+                    <!-- ================================================== -->
+                  </div>
+                  <div>
+                    <!-- =============== BAR HEALTH ======================= -->
+                    <div class="health-bar-enemy" data-total="1000" data-value="1000">
+                      <div class="bar-enemy">
+                        <div class="hit-enemy"></div>
+                      </div>
+                    </div>
+                    <!-- =================================================== -->
+                    <div class="name-enemy">
+                      <!-- =============== NAME ENEMY ====================== -->
+                      <p class="p-enemy">BOSS SAWIT</p>
+                      <!-- ================================================= -->
+                    </div>
+                  </div>
+                </div>
+                <div class="box-player">
+                  <!-- ============ DIV CHARACTER PLAYER ====================== -->
+                  <!-- ====== BEHAVIOR IDLE PLAYER ======= -->
+                  <img id="playerChar" class="image" src="assets/idle.gif" alt="" />
+                  <!-- ==================================== -->
+                  <!-- ====== BEHAVIOR ATTACK PLAYER ======= -->
+                  <img
+                    id="playerCharAttack"
+                    class="image-attack hidden"
+                    src="assets/attack.gif"
+                    alt=""
+                  />
+                  <!-- =================================== -->
+                  <!-- ====== BEHAVIOR HEAL PLAYER ======= -->
+                  <img
+                    id="playerCharHeal"
+                    class="image-heal hidden"
+                    src="assets/heal.gif"
+                    alt=""
+                  />
+                  <!-- =================================== -->
+                  <!-- ====== BEHAVIOR DEFF PLAYER ======= -->
+                  <img
+                    id="playerCharDeff"
+                    class="image-deffend hidden"
+                    src="assets/deffend.gif"
+                    alt=""
+                  />
+                </div>
+                <!-- =================================== -->
+                <div class="box-enemy">
+                  <!-- ====== BEHAVIOR ENEMY IDLE ======= -->
+                  <img
+                    id="enemyChar"
+                    class="image-enemy-idle"
+                    src="assets/idleBehaveBoss.gif"
+                    alt="idle"
+                  />
+                  <!-- =================================== -->
+                  <!-- ====== BEHAVIOR ENEMY ATTACK ======= -->
+                  <img
+                    id="enemyCharAttack"
+                    class="image-enemy-attack hidden"
+                    src="assets/attackBehavBoss.gif"
+                    alt="attack"
+                  />
+                  <!-- =================================== -->
+                  <!-- ====== BEHAVIOR ENEMY DEATH ======= -->
+                  <img
+                    id="enemyCharDeath"
+                    class="image-enemy-death hidden"
+                    src="assets/deathBehavBosss.gif"
+                    alt="death"
+                  />
+                  <!-- =================================== -->
+          
+                </div>
+              </div>
+              <div class="row">
+                <button id="toggleButton" class="btn">
+                  <audio id="audioAttackPlayer" src="assets/hit-woosh-1485.wav"></audio>
+                  <img style="width: 40px; height: 40px" src="assets/attack.png" alt="" />
+                </button>
+                <button onclick="buttonHeal()" id="toggleButton1" class="btn">
+                  <audio
+                    id="audioHealPlayer"
+                    src="assets/minecraft-drinking-sound-effect.mp3"
+                  ></audio>
+                  <img
+                    style="width: 40px; height: 40px"
+                    src="assets/regeneration.png"
+                    alt=""
+                  />
+                </button>
+                <button onclick="buttonDeff()" id="toggleButton2" class="btn">
+                  <img style="width: 40px; height: 40px" src="assets/shield.png" alt="" />
+                </button>
+              </div>
+              <!-- ================ button apabila ingin skip ke bos selanjutnya alias instant kill ======================= -->
+              <div class="instant-kills">
+                <button
+                  onclick="buttonInstantKill()"
+                  id="toggleButton3"
+                  class="btn-instant"
+                >
+                  <img style="width: 20px; height: 20px" src="assets/skull.png" alt="" />
+                </button>
+              </div>
 
 
 
 
 
-    <div id="mainGame" style="color:white">
-        <button id="menang">menang</button>
-        <button id="kalah">kalah</button>
-    </div>
 
-    <div id="menuKalah" style="color:white;">
-        <h1>Anda telah gugur di petarungan</h1>
-        <button id="retryButton">Kembali ke menu</button>
-    </div>
 
+
+        </div>
     <script src="main.js">
     </script>
 </body>
