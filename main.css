@@ -1,12 +1,17 @@
 html {
-    background-color: black;
-    margin: 0;
+    margin: 0 auto;
     height: 100%;
 }
 
 body {
     height: 100%;
     margin: 0;
+    padding: 0;
+    background-image: url(img/background4Kbaru.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-color: black;
 }
 
 .container {

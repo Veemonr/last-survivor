@@ -1,89 +1,188 @@
 const namaPejuang=["Bung Karno","Jess No Limit","Jisoo"]
 let pejuangTerpilih = ""
+let dialogData=[]
 
-let dialogData={opening:[{
-    pesan:"Kisah dimulai di sebuah desa kecil bernama Merdeka, yang terletak di tengah hutan yang subur.",
-    type:"characterDialog",
-    actor:"Narator",
-        },
-        {
-    pesan:"Kamu adalah seorang pejuang muda yang bercita-cita membebaskan tanah air dari penjajahan.",
-    type:"characterDialog",
-    actor:"Narator",
-        },
-        {
-    pesan:"Saat fajar menyingsing, kamu mengenakan pakaian perjuanganmu dan memegang pedang pusaka yang berkilauan.",
-    type:"characterDialog",
-    actor:"Narator",
-        },
-        {
-    pesan:"Di tengah hutan, kamu menemui markas pasukan penjajah yang dipimpin oleh Bos 1, seorang perwira Belanda yang kejam. ",
-    type:"characterDialog",
-    actor:"Narator",
-        },
-        {
-    pesan:"Dengan mata yang tajam, dia menatapmu seolah meremehkan niatmu.",
-    type:"characterDialog",
-    actor:"Narator",
-        },
-        {
-    pesan:"Kalian terlibat dalam pertarungan sengit, di mana kamu berhasil mengalahkannya dan membebaskan beberapa tahanan yang ditahan.",
-    type:"characterDialog",
-    actor:"Narator",
-        },
-        {
-    pesan:`“ inlander, beraninya kau muncul di hadapan ku,” `,
-    type:"villianDialog",
-    actor:"Penjajah Belanda",
-        },
-        {
-    pesan:`“maju dań matilah!!!” `,
-    type:"villianDialog",
-    actor:"Penjajah Belanda",
-        }
-    ],
-    setelahBoss1:[
-        {
-    pesan:"bos 1",
-    type:"",
-    actor:"",
-        }    
-    ],
-    setelahBoss2:[
-        {
-            pesan:"bos 2",
-            type:"",
-            actor:"",
-        }
-    ],
-    setelahBoss3:[
-        {
-            pesan:"bos 3",
-            type:"",
-            actor:"",
-        }
-    ],
-    kalahBoss1:[
-        {
-            pesan:"kalah boss 1",
-            type:"",
-            actor:"",
-        }
-    ],
-    kalahBoss2:[
-        {
-            pesan:"kalah boss 2",
-            type:"",
-            actor:"",
-        }
-    ],
-    kalahBoss3:[
-        {
-            pesan:"kalah boss 3",
-            type:"",
-            actor:"",
-        }
-    ]
+function reAssign(){
+    dialogData={opening:[{
+        pesan:"Kisah dimulai di sebuah desa kecil bernama Merdeka, yang terletak di tengah hutan yang subur.",
+        type:"characterDialog",
+        actor:"Narator",
+            },
+            {
+        pesan:"Kamu adalah seorang pejuang muda yang bercita-cita membebaskan tanah air dari penjajahan.",
+        type:"characterDialog",
+        actor:"Narator",
+            },
+            {
+        pesan:"Saat fajar menyingsing, kamu mengenakan pakaian perjuanganmu dan memegang pedang pusaka yang berkilauan.",
+        type:"characterDialog",
+        actor:"Narator",
+            },
+            {
+        pesan:"Di tengah hutan, kamu menemui markas pasukan penjajah yang dipimpin oleh Dimitrije van der Berg, seorang perwira Belanda yang kejam.",
+        type:"characterDialog",
+        actor:"Narator",
+            },
+            {
+        pesan:"Dengan mata yang tajam, dia menatapmu seolah meremehkan niatmu.",
+        type:"characterDialog",
+        actor:"Narator",
+            },
+            {
+        pesan:"Kalian terlibat dalam pertarungan sengit, di mana kamu berhasil mengalahkannya dan membebaskan beberapa tahanan yang ditahan.",
+        type:"characterDialog",
+        actor:"Narator",
+            },
+            {
+        pesan:`“Inlander, beraninya kau muncul di hadapan ku?” `,
+        type:"villianDialog",
+        actor:"Dimitrije van der Berg",
+            },
+            {
+        pesan:`“Maju dań matilah!!!” `,
+        type:"villianDialog",
+        actor:"Dimitrije van der Berg",
+            }
+        ],
+        setelahBoss1:[
+            {
+        pesan:"Pada akhirnya aku mati di tangan pejuang, bukan hal memalukan....",
+        type:"villianDialog",
+        actor:"Dimitrije van der Berg",
+            },
+            {
+        pesan:"Perjalananmu melanjutkan ke kota yang diduduki oleh pasukan Iva Nakamura, seorang jenderal Jepang yang licik.",
+        type:"characterDialog",
+        actor:"Narator",
+            },
+            {
+        pesan:"Bangunan-bangunan di kota ini dipenuhi bendera merah matahari, mengingatkanmu pada penjajahan baru.",
+        type:"characterDialog",
+        actor:"Narator",
+            },
+            {
+        pesan:"Kamu harus menggunakan kecerdikanmu untuk menjebaknya dalam permainan pikiran sebelum akhirnya menghadapinya dalam pertarungan hebat",
+        type:"characterDialog",
+        actor:"Narator",
+            },
+            {
+        pesan:"Setelah kemenanganmu, semangat para penduduk mulai membara!",
+        type:"characterDialog",
+        actor:"Narator",
+            },
+            {
+        pesan:"Setelah berhasil mengalahkan si Belanda itu, kau pikir kau bisa mengalahkan ku??? HAHAHA maju dan matilah !!",
+        type:"villianDialog",
+        actor:"Iva Nakamura",
+            },
+        ],
+        setelahBoss2:[
+            {
+                pesan:"Furu… sa… to ni kaere..",
+                type:"villianDialog",
+                actor:"Iva Nakamura",
+            },
+            {
+                pesan:"Jejakmu mengarah ke gunung suci, tempat pengkhianat bangsa yang dulu berdiri di pihakmu kini bersekutu dengan musuh-musuh penjajah.",
+                type:"characterDialog",
+                actor:pejuangTerpilih,
+            },
+            {
+                pesan:"Nunir, seorang yang dulunya kau anggap sahabat, kini telah berbalik menjadi penghianat.",
+                type:"characterDialog",
+                actor:pejuangTerpilih,
+            },
+            {
+                pesan:"Dia mengejarmu dengan dendam dalam hati, dan kamu harus menghadapi dualitas emosi saat menghadapinya.",
+                type:"characterDialog",
+                actor:pejuangTerpilih,
+            },
+            {
+                pesan:"Setelah pertarungan yang penuh emosi, kamu berhasil mengalahkannya.",
+                type:"characterDialog",
+                actor:pejuangTerpilih,
+            },
+            {
+                pesan: `Seharusnya kau menjalani hidup yang tenang di desa saja ${pejuangTerpilih} aku menyayangkan kita harus bertempur`,
+                type:"villianDialog",
+                actor:"Nunir",
+            },
+            {
+                pesan: "Kau seharusnya tau, seberapa hebatnya para penjajah ini",
+                type:"villianDialog",
+                actor:"Nunir",
+            },
+            {
+                pesan: "Kenapa kau harus membuang nyawa mu demi orang orang yang bahkan tidak mengenal dan bahkan tidak tau apa yang telah kau lakukan sejauh ini untuk mereka",
+                type:"villianDialog",
+                actor:"Nunir",
+            },
+            {
+                pesan: "Tapi jika inilah akhirnya, biarkan aku yang mengakhiri hidup mu dengan pedangku",
+                type:"villianDialog",
+                actor:"Nunir",
+            },
+            {
+                pesan: "dan biarkan aku tetap menjadi orang yang akan selalu mengenangmu setelah kematianmu, maju dan matilah sahabat ku!!!",
+                type:"villianDialog",
+                actor:"Nunir",
+            },
+        ],
+        setelahBoss3:[
+            {
+                pesan:`Kau tau ${pejuangTerpilih}, mati ditanganmu ternyata tidak terlalu buruk, uhuuuukkk… Maafkan aku, semoga perjuangan kalian terus berlanjut~
+                Maafff…..`,
+                type:"villianDialog",
+                actor:"Nunir",
+            },
+            {
+                pesan:'Dengan ketekunan dan semangat yang tak tergoyahkan, kita akhirnya mampu mengusir para penjajah',
+                type:"characterDialog",
+                actor: pejuangTerpilih,
+            },
+            {
+                pesan:'Desa Merdeka yang dulu sunyi dan tak berdaya, kini bersinar dengan semangat kemerdekaan yang meriah.',
+                type:"characterDialog",
+                actor: pejuangTerpilih,
+            },
+            {
+                pesan:'Rakyat bersatu dan bersama-sama membangun tanah air yang bebas dari penjajahan, mengisahkan kisah pahlawan yang tak pernah menyerah.',
+                type:"characterDialog",
+                actor: pejuangTerpilih,
+            },
+            {
+                pesan:'Dalam perjalana kita yang penuh liku ini, kita telah membuktikan bahwa semangat dan tekad adalah senjata yang paling ampuh.',
+                type:"characterDialog",
+                actor: pejuangTerpilih,
+            },
+            {
+                pesan:'Kisah perjuangan kita akan menjadi inspirasi bagi generasi mendatang, mengajarkan nilai-nilai keberanian dan cinta tanah air.',
+                type:"characterDialog",
+                actor: pejuangTerpilih,
+            },
+        ],
+        kalahBoss1:[
+            {
+                pesan:"Pribumi lemah, mencoba menantang ku??? HAHAHA SUNGGUH BODOHHHH!!!",
+                type:"villianDialog",
+                actor:"Dimitrije van der Berg",
+            }
+        ],
+        kalahBoss2:[
+            {
+                pesan:  "Warera ga shouri o tataeyou, Dai Nippon!!",
+                type:   "villianDialog",
+                actor:  "Iva Nakamura",
+            }
+        ],
+        kalahBoss3:[
+            {
+                pesan:"aku sudah tahu bahwa hal ini akan terjadi, istirahatlah dengan tenang sahabat ku, sampai berjumpa lagi nanti",
+                type:"villianDialog",
+                actor:"Nunir",
+            }
+        ]
+    }
 }
 
 function sleep(ms) {
@@ -95,6 +194,7 @@ let kondisi="opening"
 
 async function jalanDialog(){
     document.querySelector("#bottomDialog").removeEventListener("click",jalanDialog)
+    console.log(pejuangTerpilih);
     const dialog=dialogData[kondisi][pesanKe]
     if(!dialog){
         pesanKe=0
@@ -120,11 +220,20 @@ async function jalanDialog(){
         document.querySelector("#characterDialogChar").style.opacity=0
         document.querySelector("#villianDialogChar").style.opacity=1
     }
-    if(character==="Narator"){
-        document.querySelector(`#${type}Char`).src="img/—Pngtree—boy illustration holding bambu runcing_5554569.png"
+    if(character=== pejuangTerpilih) {
+        document.querySelector(`#${type}Char`).src="img/pejuang.png"
     }
-    else if(character==="Penjajah Belanda"){
+    else if(character=== "Dimitrije van der Berg") {
         document.querySelector(`#${type}Char`).src="img/jendralBelanda.jpg"
+    }
+    else if (character=== "Iva Nakamura") {
+        document.querySelector(`#${type}Char`).src="img/jendralJepang.jpg"
+    }
+    else if (character=== "Nunir") {
+        document.querySelector(`#${type}Char`).src="img/penghianat.jpg"
+    }
+    else if (character === "Narator") {
+        document.querySelector(`#${type}Char`).src="img/narator.png"
     }
     document.querySelector("#isiDialog").innerText=""
     document.querySelector("#nameDialog").innerHTML=character
@@ -246,6 +355,7 @@ function tambahPejuang(data,dataTambah){
 
 
 function bikinPejuangButton (data) {
+    document.querySelector("#buttonName").innerHTML=""
     const header = document.createElement("h1");
     header.innerHTML = "Pilih Nama Pejuang Mu";
     document.querySelector("#buttonName").appendChild(header);
@@ -253,6 +363,7 @@ function bikinPejuangButton (data) {
         const pejuangButton = document.createElement("button");
         pejuangButton.onclick=function(){
             pejuangTerpilih = pejuangButton.innerText
+            reAssign()
             console.log(pejuangTerpilih);
             document.querySelector("#menu").style.display = "none"
             document.querySelector("#pickName").style.display = "none"
