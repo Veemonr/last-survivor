@@ -178,3 +178,7 @@ button:hover {
     background-color: gray;
     font-size:40px;
 }
+
+#menuKalah{
+    display:none;
+}

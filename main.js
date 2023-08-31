@@ -44,42 +44,42 @@ let dialogData={opening:[{
     ],
     setelahBoss1:[
         {
-    pesan:"",
+    pesan:"bos 1",
     type:"",
     actor:"",
         }    
     ],
     setelahBoss2:[
         {
-            pesan:"",
+            pesan:"bos 2",
             type:"",
             actor:"",
         }
     ],
     setelahBoss3:[
         {
-            pesan:"",
+            pesan:"bos 3",
             type:"",
             actor:"",
         }
     ],
     kalahBoss1:[
         {
-            pesan:"",
+            pesan:"kalah boss 1",
             type:"",
             actor:"",
         }
     ],
     kalahBoss2:[
         {
-            pesan:"",
+            pesan:"kalah boss 2",
             type:"",
             actor:"",
         }
     ],
     kalahBoss3:[
         {
-            pesan:"",
+            pesan:"kalah boss 3",
             type:"",
             actor:"",
         }
@@ -98,6 +98,13 @@ async function jalanDialog(){
     const dialog=dialogData[kondisi][pesanKe]
     if(!dialog){
         pesanKe=0
+        const checkKalah=kondisi.substring(0,5)
+        console.log(checkKalah);
+        if(checkKalah==="kalah"){
+            document.querySelector("#dialogMenu").style.display="none"
+            document.querySelector("#menuKalah").style.display="flex"
+            return 
+        }
         document.querySelector("#dialogMenu").style.display="none"
         document.querySelector("#mainGame").style.display="flex"
         return 
@@ -113,6 +120,12 @@ async function jalanDialog(){
         document.querySelector("#characterDialogChar").style.opacity=0
         document.querySelector("#villianDialogChar").style.opacity=1
     }
+    if(character==="Narator"){
+        document.querySelector(`#${type}Char`).src="img/—Pngtree—boy illustration holding bambu runcing_5554569.png"
+    }
+    else if(character==="Penjajah Belanda"){
+        document.querySelector(`#${type}Char`).src="img/jendralBelanda.jpg"
+    }
     document.querySelector("#isiDialog").innerText=""
     document.querySelector("#nameDialog").innerHTML=character
     const percakapan = document.querySelector("#isiDialog")
@@ -125,7 +138,43 @@ async function jalanDialog(){
     document.querySelector("#bottomDialog").addEventListener("click", jalanDialog)
 }
 
+document.querySelector("#retryButton").onclick=function(){
+    kondisi="opening"
+    document.querySelector("#menu").style.display = "block"
+    document.querySelector("#mainMenu").style.display = "flex"
+    document.querySelector("#menuKalah").style.display = "none"
+}
+document.querySelector("#menang").onclick=function(){
+    document.querySelector("#mainGame").style.display = "none"
+    document.querySelector("#dialogMenu").style.display = "block"
+    document.querySelector("#bottomDialog").addEventListener("click", jalanDialog)
+    if(kondisi==="opening"){
+        kondisi="setelahBoss1"
+    }
+    else if(kondisi==="setelahBoss1"){
+        kondisi="setelahBoss2"
+    }
+    else if(kondisi==="setelahBoss2"){
+        kondisi="setelahBoss3"
+    }
+    jalanDialog()
+}
 
+document.querySelector("#kalah").onclick=function(){
+    document.querySelector("#mainGame").style.display = "none"
+    document.querySelector("#dialogMenu").style.display = "block"
+    document.querySelector("#bottomDialog").addEventListener("click", jalanDialog)
+    if(kondisi==="opening"){
+        kondisi="kalahBoss1"
+    }
+    else if(kondisi==="setelahBoss1"){
+        kondisi="kalahBoss2"
+    }
+    else if(kondisi==="setelahBoss2"){
+        kondisi="kalahBoss3"
+    }
+    jalanDialog()
+}
 
 function showListPejuangDelete(data,target){
     const header = document.createElement("h1");
@@ -209,6 +258,7 @@ function bikinPejuangButton (data) {
             document.querySelector("#pickName").style.display = "none"
             document.querySelector("#dialogMenu").style.display = "block" 
             document.querySelector("#bottomDialog").addEventListener("click", jalanDialog)
+            jalanDialog()
             // document.querySelector("#dialogMenu").innerHTML = `selamat datang ${pejuangTerpilih}`
         }
         pejuangButton.innerHTML = pejuang;
