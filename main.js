@@ -214,6 +214,8 @@ async function jalanDialog(){
         if(checkKalah==="kalah"){
             document.querySelector("#dialogMenu").style.display="none"
             document.querySelector("#menuKalah").style.display="flex"
+            document.querySelector("#menuKalah").style.flexDirection="column"
+
             return 
         }
         document.querySelector("#dialogMenu").style.display="none"

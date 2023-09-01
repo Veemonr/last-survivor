@@ -1,389 +1,427 @@
 html {
-    margin: 0 auto;
-    height: 100%;
+  margin: 0 auto;
+  height: 100%;
 }
 
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-image: url(img/background4Kbaru.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    background-color: black;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://cdn.discordapp.com/attachments/1147000900276195350/1147001072443998268/bgbaru.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-color: black;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
 }
 
 #menu {
-    opacity: 75%;
-    text-align: center;
-    background-color: red;
-    margin-left: 25%;
-    width: 50%;
-    height: 50;
-    border-radius: 20px;
-    border:10px solid black;
+  opacity: 75%;
+  text-align: center;
+  background-color: red;
+  margin-left: 25%;
+  width: 50%;
+  height: 50;
+  border-radius: 20px;
+  border: 10px solid black;
 }
+
 #mainMenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-menu-container {
-    background-color: rgba(255, 255, 255, 0.864);
-    border: 1px solid white;
-    border-top-left-radius: 1em;
-    border-bottom-right-radius: 1em;
-    padding: 1em;
+  background-color: rgba(255, 255, 255, 0.864);
+  border: 1px solid white;
+  border-top-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  padding: 1em;
 }
 
 #menuAdd {
-    display: none;
-    flex-direction: column;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
+  display: none;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
 }
 
-#showAdd{
-    color:white;
-}
-#showDelete{
-    color:white;
+#showAdd {
+  color: white;
 }
 
-#menuDelete{
-    display: none;
-    flex-direction: column;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
+#showDelete {
+  color: white;
 }
 
-#pickMenu{
-    display: none;
-    flex-direction: column;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
-    
+#menuDelete {
+  display: none;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
 }
-#pickName{
-    display: none;
-    flex-direction: column;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
+
+#pickMenu {
+  display: none;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#pickName {
+  display: none;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 #menu button {
-    display: flex;
-    background-color: #C0C0C0;
-    font-size: 2em;
-    color:black;
-    opacity: 100%;
-    margin: 30px 0;
-    font-family: 'Bebas Neue', sans-serif;
-    border-radius: 5px;
-    padding: 0.2em;
+  display: flex;
+  background-color: #C0C0C0;
+  font-size: 2em;
+  color: black;
+  opacity: 100%;
+  margin: 30px 0;
+  font-family: 'Bebas Neue', sans-serif;
+  border-radius: 5px;
+  padding: 0.2em;
 }
 
 #menu button:hover {
-    cursor: pointer;
-    color: aliceblue;
+  cursor: pointer;
+  color: aliceblue;
 }
 
 .buttons {
-    font-family: 'Bebas Neue', sans-serif;
-    border-radius: 5px;
-    padding: 0.2em;
+  font-family: 'Bebas Neue', sans-serif;
+  border-radius: 5px;
+  padding: 0.2em;
 }
 
 
 
-#start, #add, #delete {
-   display: flex;
-   justify-content: center;
+#start,
+#add,
+#delete {
+  display: flex;
+  justify-content: center;
 }
 
 #buttonName {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#mainGame{
-    display: none;
-    width: 100%;
-    height: 100%;
+#mainGame {
+  display: none;
+  width: 100%;
+  height: 100%;
 }
 
-#dialogMenu{
-    display:none;
+#dialogMenu {
+  display: none;
 }
 
 
 
-#dialogMenu{
-    background-color: aqua;
-    width: 100%;
-    height: 100%;
+#dialogMenu {
+  background-color: aqua;
+  width: 100%;
+  height: 100%;
 }
 
 #topDialog {
-    display: flex;
-    background-color: blue;
-    width: 95%;
-    height: 65%;
-    padding-left:5%;
+  display: flex;
+  background-color: blue;
+  width: 95%;
+  height: 65%;
+  padding-left: 5%;
 }
 
-#bottomDialog{
-    padding-top: 1%;
-    background-color: green;
-    width: 100%;
-    height: 32.9%;
-    cursor: pointer;
+#bottomDialog {
+  padding-top: 1%;
+  background-color: green;
+  width: 100%;
+  height: 32.9%;
+  cursor: pointer;
 }
 
 #characterDialog {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 #villianDialog {
-    display: flex;
-    margin-left: auto;
-    margin-top: auto;
-    margin-right: 5%;
+  display: flex;
+  margin-left: auto;
+  margin-top: auto;
+  margin-right: 5%;
 }
 
-#nameDialog{
-    width: 12%;
-    height: 12%;
-    background-color: black;
-    text-align: center;
-    align-content: center;
-    margin-left: 5%;
-    font-size:20px;
-    display: inline;
-    padding-right: 2%;
-    padding-left: 2%;
+#nameDialog {
+  width: 12%;
+  height: 12%;
+  background-color: black;
+  text-align: center;
+  align-content: center;
+  margin-left: 5%;
+  font-size: 20px;
+  display: inline;
+  padding-right: 2%;
+  padding-left: 2%;
 }
 
-#isiDialog{
-    display: flex;
-    margin:2%;
-    margin-top: 0%;
-    padding:1%;
-    width: 95%;
-    height: 70%;
-    background-color: gray;
-    font-size:40px;
+#isiDialog {
+  display: flex;
+  margin: 2%;
+  margin-top: 0%;
+  padding: 1%;
+  width: 95%;
+  height: 70%;
+  background-color: gray;
+  font-size: 40px;
 }
 
-#menuKalah{
-    display:none;
-    opacity: 75%;
-    text-align: center;
-    background-color: red;
-    margin-left: 25%;
-    width: 50%;
-    height: 50;
-    border-radius: 20px;
-    border:10px solid black;
+#menuKalah {
+  display: none;
+  opacity: 75%;
+  text-align: center;
+  background-color: red;
+  margin-left: 25%;
+  width: 50%;
+  height: 50;
+  border-radius: 20px;
+  border: 10px solid black;
+}
+
+#retryButton {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 20px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: white;
+  font-weight: 600;
+}
+
+#retryButton :hover {
+  cursor: pointer;
 }
 
 /* ! ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt */
 
-  .instant-kills{
-    position: absolute;
-    bottom: 0;
-  }
-  .stage1 {
-    font-family: "Black Ops One", cursive;
-    font-size: 72px;
-    background: -webkit-linear-gradient(#f2c943, #333);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .hidden {
-    display: none;
-  }
-  .btn-instant {
-    background-color: red;
-    width: 35px;
-    height: 32px;
-  }
+.instant-kills {
+  position: absolute;
+  bottom: 0;
+}
 
-  .row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    display: flex;
-    margin-top: 20px;
-    position: absolute;
-    bottom: 50px;
-    align-self: center;
-    justify-content: center;
-    width: 100%;
-  }
-  .hBar {
-    width: 100%;
-    flex-direction: row;
-    display: flex;
-    justify-content: space-between;
-  }
-  .name-player {
-    color: white;
-    margin-top: 10px;
-    margin-left: 50px;
-  }
-  .p-player {
-    text-align: start;
-    margin-right: 50px;
-    margin-top: -10px;
-    color: white;
-    font-family: "Rubik Iso", cursive;
-    font-size: 30px;
-  }
+.stage1 {
+  font-family: "Black Ops One", cursive;
+  font-size: 72px;
+  background: -webkit-linear-gradient(#f2c943, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-  .p-enemy {
-    text-align: end;
-    margin-right: 50px;
-    margin-top: -1px;
-    color: white;
-    font-family: "Rubik Iso", cursive;
-    font-size: 30px;
-  }
+.hidden {
+  display: none;
+}
 
-  .box-player {
-    position: absolute;
-    bottom: 175px;
-    left: 300px;
-  }
+.btn-instant {
+  background-color: red;
+  width: 35px;
+  height: 32px;
+}
 
-  .box-enemy {
-    position: absolute;
-    right: 300px;
-    bottom: 170px;
-    transform: rotateY(180deg);
-  }
-  .image {
-    width: 200px;
-    height: 200px;
-  }
-  .image-enemy-idle{
-    width: 300px;
-    height: 300px;
+.row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 50px;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+}
 
-  }
-  .image-enemy-attack {
-    width: 300px;
-    height: 300px;
-    position: absolute;
-  }
-  .image-enemy-death {
-    width: 300px;
-    height: 300px;
-    position: absolute;
-  }
-  .image-attack {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-  }
-  .image-heal {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-  }
-  .image-deffend {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-  }
-  .health-bar-enemy, .health-bar-player {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 300px;
-    height: 40px;
-    padding: 5px;
-    background: #ddd;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 10px;
-    position: relative;
-    margin: 20px 50px 0 50px;
-  }
-  .bar-enemy, .bar-player {
-    background: #c54;
-    width: 100%;
-    height: 30px;
-    position: relative;
-    border-radius: 5px;
+.hBar {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
 
-    transition: width 0.5s linear;
-  }
+.name-player {
+  color: white;
+  margin-top: 10px;
+  margin-left: 50px;
+}
 
-  .hit-enemy, .hit-player {
-    background: rgba(255, 255, 255, 0.6);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 0px;
+.p-player {
+  text-align: start;
+  margin-right: 50px;
+  margin-top: -10px;
+  color: white;
+  font-family: "Rubik Iso", cursive;
+  font-size: 30px;
+}
 
-    transition: width 0.5s linear;
-  }
-  .btn {
-    display: grid;
-    margin-left: 10px;
-    margin-right: 10px;
-    place-items: center;
-    background: #e3edf7;
-    padding: 1.4em;
-    border-radius: 10px;
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-      -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0);
-    cursor: pointer;
-    transition: transform 0.5s;
-  }
+.p-enemy {
+  text-align: end;
+  margin-right: 50px;
+  margin-top: -1px;
+  color: white;
+  font-family: "Rubik Iso", cursive;
+  font-size: 30px;
+}
 
-  .btn:hover {
-    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-      inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
-      -0.5px -0.5px 0px rgba(255, 255, 255, 1),
-      0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
-      0px 12px 10px -10px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    transform: translateY(0.5em);
-  }
+.box-player {
+  position: absolute;
+  bottom: 175px;
+  left: 300px;
+}
 
-  .btn svg {
-    transition: transform 0.5s;
-  }
+.box-enemy {
+  position: absolute;
+  right: 300px;
+  bottom: 170px;
+  transform: rotateY(180deg);
+}
 
-  .btn:hover svg {
-    transform: scale(0.9);
-    fill: #333333;
-  }
+.image {
+  width: 200px;
+  height: 200px;
+}
 
-  .box-luar{
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background-image: url(assets/gif.gif);
-    background-size: cover;
-  }
+.image-enemy-idle {
+  width: 300px;
+  height: 300px;
+
+}
+
+.image-enemy-attack {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.image-enemy-death {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.image-attack {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+.image-heal {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+.image-deffend {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+.health-bar-enemy,
+.health-bar-player {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 300px;
+  height: 40px;
+  padding: 5px;
+  background: #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 10px;
+  position: relative;
+  margin: 20px 50px 0 50px;
+}
+
+.bar-enemy,
+.bar-player {
+  background: #c54;
+  width: 100%;
+  height: 30px;
+  position: relative;
+  border-radius: 5px;
+
+  transition: width 0.5s linear;
+}
+
+.hit-enemy,
+.hit-player {
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0px;
+
+  transition: width 0.5s linear;
+}
+
+.btn {
+  display: grid;
+  margin-left: 10px;
+  margin-right: 10px;
+  place-items: center;
+  background: #e3edf7;
+  padding: 1.4em;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.btn:hover {
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+    0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transform: translateY(0.5em);
+}
+
+.btn svg {
+  transition: transform 0.5s;
+}
+
+.btn:hover svg {
+  transform: scale(0.9);
+  fill: #333333;
+}
+
+.box-luar {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-image: url(assets/gif.gif);
+  background-size: cover;
+}
